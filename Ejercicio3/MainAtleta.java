@@ -8,7 +8,7 @@ public class MainAtleta {
         
         Atleta[] atletas = AtletasAleatorios.atletasAleatorios(10);
         Impresion.imprimirEncabezado();
-        AtletasAleatorios.imprimirAtletas(atletas);
+        Impresion.imprimirAtletas(atletas);
         Impresion.mostrarEstadisticas(atletas);
     }
 }

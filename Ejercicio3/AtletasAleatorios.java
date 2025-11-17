@@ -22,17 +22,4 @@ public class AtletasAleatorios {
         }
         return atletas;
     }
-
-
-
-    public static void imprimirAtletas(Atleta[] atletas){
-        for (int i = 0; i < atletas.length; i++) {
-            System.out.printf("%-7d %-10s %-12.2f %-10.2f %-15.2f %-10s%n",i+1,
-                atletas[i].getNombre(),
-                atletas[i].getDistanciaRecorrida(),
-                atletas[i].getTiempoEmpleado(),
-                atletas[i].calcularVelocidad(),
-                atletas[i].esValido() ? "Si" : "No");
-            }
-    }
 }
