@@ -27,10 +27,10 @@ public class Atleta {
     }
 
     public double calcularVelocidad() {
-        return (tiempoEmpleado > 0) ? (distanciaRecorrida / tiempoEmpleado) : 0;
+        return (tiempoEmpleado > 0) ? (distanciaRecorrida / tiempoEmpleado) : 0.0;
     }
 
     public boolean esValido() {
-        return (distanciaRecorrida > 0 && tiempoEmpleado > 0);
+        return (distanciaRecorrida > 0.00 && tiempoEmpleado > 0.00);
     }
 }

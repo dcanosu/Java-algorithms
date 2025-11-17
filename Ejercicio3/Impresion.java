@@ -14,12 +14,12 @@ public class Impresion {
 
     public static void imprimirAtletas(Atleta[] atletas){
         for (int i = 0; i < atletas.length; i++) {
-            System.out.printf("%-7d %-10s %-12.2f %-10.2f %-15.2f %-10s%n",i+1,
+            System.out.printf("%-7d %-10s %,-12.3f %-10.3f %,-15.3f %-10s%n",i+1,
                 atletas[i].getNombre(),
                 atletas[i].getDistanciaRecorrida(),
                 atletas[i].getTiempoEmpleado(),
                 atletas[i].calcularVelocidad(),
-                atletas[i].esValido() ? "Si" : "No");
+                atletas[i].esValido() ? "Sí" : "No");
         }
     }
     
@@ -39,21 +39,22 @@ public class Impresion {
             System.out.println("No se pueden calcular estadísticas: ningún tramo es válido.");
             System.out.println("-".repeat(repeticiones));
         } else {
-            System.out.printf("Velocidad promedio: %.2f m/s%n", velocidadPromedio);
+            System.out.printf("Velocidad promedio: %.3f m/s%n", velocidadPromedio);
 
             if (masRapido != null) {
-                System.out.printf("Atleta más rápido: %s (Velocidad: %.2f m/s)%n", masRapido.getNombre(), masRapido.calcularVelocidad());
+                System.out.printf("Atleta más rápido: %s (Velocidad: %.3f m/s)%n", masRapido.getNombre(), masRapido.calcularVelocidad());
             } else {
                 System.out.println("Atleta más rápido: No encontrado.");
             }
             
             if (masLento != null) {
-                System.out.printf("Atleta más lento: %s (Velocidad: %.2f m/s)%n", masLento.getNombre(), masLento.calcularVelocidad());
+                System.out.printf("Atleta más lento: %s (Velocidad: %.3f m/s)%n", masLento.getNombre(), masLento.calcularVelocidad());
             } else {
                 System.out.println("Atleta más lento: No encontrado.");
             }
-            
-            System.out.printf("Distancia total válida: %.2f metros%n", distanciaTotal);
+
+            System.out.printf("Distancia total válida: %.3f metros%n", distanciaTotal);
+            System.out.println("-".repeat(repeticiones));
         }
     }
 }
