@@ -42,18 +42,18 @@ public class Impresion {
             System.out.printf("Velocidad promedio: %.3f m/s%n", velocidadPromedio);
 
             if (masRapido != null) {
-                System.out.printf("Atleta más rápido: %s (Velocidad: %.3f m/s)%n", masRapido.getNombre(), masRapido.calcularVelocidad());
+                System.out.printf("Atleta más rápido: %s (Velocidad: %,.3f m/s)%n", masRapido.getNombre(), masRapido.calcularVelocidad());
             } else {
                 System.out.println("Atleta más rápido: No encontrado.");
             }
             
             if (masLento != null) {
-                System.out.printf("Atleta más lento: %s (Velocidad: %.3f m/s)%n", masLento.getNombre(), masLento.calcularVelocidad());
+                System.out.printf("Atleta más lento: %s (Velocidad: %,.3f m/s)%n", masLento.getNombre(), masLento.calcularVelocidad());
             } else {
                 System.out.println("Atleta más lento: No encontrado.");
             }
 
-            System.out.printf("Distancia total válida: %.3f metros%n", distanciaTotal);
+            System.out.printf("Distancia total válida: %,.3f metros%n", distanciaTotal);
             System.out.println("-".repeat(repeticiones));
         }
     }

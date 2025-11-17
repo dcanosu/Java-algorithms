@@ -1,8 +1,52 @@
 package Ejercicio3;
 import java.util.Random;
+import java.util.Scanner;
 
 public class SolicitarAtletas {
+    public static Atleta[] registrarAtleta(){
 
+        Scanner lea = new Scanner(System.in);
+        int numeroAtletas;
+
+        int repeticiones = 65;
+        System.out.println("\n"+"=".repeat(repeticiones));
+        System.out.println("                     INGRESO DE DATOS DE ATLETAS");
+        System.out.println("=".repeat(repeticiones)+"\n");
+
+        System.out.print("Ingrese la cantidad de atletas a registrar: ");
+        numeroAtletas = lea.nextInt();
+        lea.nextLine();
+
+        if (numeroAtletas <= 0) {
+            System.out.println("\n"+"=".repeat(repeticiones));
+            System.out.println("Cantidad inválida. No se registrarán atletas.");
+            System.out.println("=".repeat(repeticiones)+"\n");
+            System.out.println("Saliendo del programa...");
+            return null; 
+        }
+
+        Atleta [] atletas = new Atleta[numeroAtletas];
+
+        for (int i = 0; i < numeroAtletas; i++) {
+            System.out.println("\n=== Atleta " + (i + 1) + " ===");
+
+            System.out.print("Nombre del atleta: ");
+            String nombre = lea.nextLine();
+
+            System.out.println("Ingrese la distancia recorrdida en metros: ");
+            double distancia = lea.nextDouble();
+
+            System.out.println("Ingrese el tiempo empleado en segundos: ");
+            double tiempo = lea.nextDouble();
+
+            // if (tiempo == 0 || distancia == 0) {
+            //     tiempo = 0;
+            //     distancia = 0;
+            // }
+
+            atletas[i] = new Atleta(nombre, distancia, tiempo);
+        }return atletas;
+    }
 
     public static Atleta[] atletasAleatorios(int numeroAtletas){
         
