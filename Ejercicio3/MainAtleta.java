@@ -1,9 +1,12 @@
 package Ejercicio3;
 
+import java.util.Scanner;
+
 public class MainAtleta {
     public static void main(String[] args) {
-        // Atleta[] atletas = SolicitarAtletas.registrarAtleta();
-        Atleta[] atletas = SolicitarAtletas.atletasAleatorios(10);
+        Scanner miScanner = new Scanner(System.in);
+        Atleta[] atletas = SolicitarAtletas.registrarAtleta(miScanner);
+        // Atleta[] atletas = SolicitarAtletas.atletasAleatorios(10);
 
         if (atletas != null) {
             Impresion.imprimirEncabezado();
@@ -12,5 +15,6 @@ public class MainAtleta {
         } else {
             System.out.println("No se realizó el registro de ningún atleta");
         }
+        miScanner.close();
     }
 }

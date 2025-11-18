@@ -3,18 +3,15 @@ package Ejercicio4;
 import java.util.Scanner;
 
 public class SolicitarDatos {
-    public static Apartamento[] registrarApartamentos() {
+    public static Apartamento[] registrarApartamentos(Scanner lea) {
         
-        Scanner lea = new Scanner(System.in);
-        int K;
-
         int repeticiones = 65;
         System.out.println("\n"+"=".repeat(repeticiones));
         System.out.println("                     INGRESO DE DATOS DE APARTAMENTOS");
         System.out.println("=".repeat(repeticiones)+"\n");
         
         System.out.print("Ingrese la cantidad de apartamentos a registrar: ");
-        K = lea.nextInt();
+        int K = lea.nextInt();
 
         if (K <= 0) {
             System.out.println("\n"+"=".repeat(repeticiones));
