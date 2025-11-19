@@ -3,13 +3,13 @@ package Ejercicio3;
 public class Impresion {
 
     public static void imprimirEncabezado() {
-    int repeticiones = 65;
-    System.out.println("\n"+"=".repeat(repeticiones));
-    System.out.println("                     LISTA DE ATLETAS");
-    System.out.println("=".repeat(repeticiones)+"\n");
-    System.out.printf("%-7s %-10s %-12s %-10s %-15s %-10s%n",
-            "Número", "Nombre", "Distancia(m)", "Tiempo(s)", "Velocidad(m/s)", "Válido");
-    System.out.println("-".repeat(repeticiones));
+        int repeticiones = 65;
+        System.out.println("\n"+"=".repeat(repeticiones));
+        System.out.println("                     LISTA DE ATLETAS");
+        System.out.println("=".repeat(repeticiones)+"\n");
+        System.out.printf("%-7s %-10s %-12s %-10s %-15s %-10s%n",
+                "Número", "Nombre", "Distancia(m)", "Tiempo(s)", "Velocidad(m/s)", "Válido");
+        System.out.println("-".repeat(repeticiones));
     }
 
     public static void imprimirAtletas(Atleta[] atletas){
